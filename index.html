@@ -257,9 +257,9 @@ async function analyzeArticle() {
   loading.classList.add('active');
   errorMsg.classList.remove('active');
   try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
+    const response = await fetch('/.netlify/functions/analyze', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': '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', 'anthropic-version': '2023-06-01' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 1000,
