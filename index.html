@@ -108,25 +108,12 @@
 <main>
   <div class="tabs">
     <button class="tab active" onclick="switchTab('archive')">기사 아카이브</button>
-    <button class="tab" onclick="switchTab('analyze')">직접 분석하기</button>
     <button class="tab" onclick="switchTab('about')">소개</button>
   </div>
 
   <div id="tab-archive"></div>
 
-  <div id="tab-analyze" style="display:none;">
-    <div class="input-section">
-      <h2>기사 입력</h2>
-      <textarea id="articleInput" placeholder="분석할 정치 기사를 여기에 붙여넣기 하세요..."></textarea>
-      <div class="btn-row">
-        <button class="btn-primary" onclick="analyzeArticle()" id="analyzeBtn">AI 분석하기</button>
-        <button class="btn-secondary" onclick="document.getElementById('articleInput').value=''">초기화</button>
-      </div>
-      <div class="loading" id="loading"><div class="spinner"></div><span>AI가 분석하는 중...</span></div>
-      <div class="error-msg" id="errorMsg"></div>
-    </div>
-    <div id="analyzeGrid"><p style="color:var(--text-muted);font-size:13px;">분석한 기사가 여기에 표시됩니다.</p></div>
-  </div>
+
 
   <div id="tab-about" style="display:none;">
     <div class="about-box">
